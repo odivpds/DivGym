@@ -1,0 +1,228 @@
+/* --- Root Variables & Reset --- */
+:root {
+    --primary-color: #f97316; /* Orange */
+    --secondary-color: #111827; /* Dark Gray/Black */
+    --accent-blue: #3b82f6;
+    --text-light: #f3f4f6;
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+/* --- Navigation Styling --- */
+#navbar {
+    transition: var(--transition);
+}
+
+/* Efek saat navbar di-scroll */
+#navbar.scrolled {
+    background-color: rgba(17, 24, 39, 0.95);
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+}
+
+/* Animasi underline pada menu */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* --- Mobile Menu --- */
+#mobile-menu {
+    display: none; /* Akan dikontrol via JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--secondary-color);
+    z-index: 40;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#mobile-menu.active {
+    display: flex;
+}
+
+/* --- Hero Section Customizations --- */
+#home h1 {
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+}
+
+.fixed-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Berada di belakang segalanya */
+    pointer-events: none; /* Agar tidak menghalangi klik pada tombol */
+}
+
+#about, #facilities, #classes, #team, #contact {
+    position: relative;
+    z-index: 20; /* Lebih tinggi dari video yang -1 */
+    background-color: white; /* Default untuk about, pastikan tidak transparan */
+}
+
+#facilities, #contact {
+    background-color: #f3f4f6; /* bg-gray-100 */
+}
+
+#classes {
+    background-color: #111827; /* bg-gray-900 */
+}
+
+#home .relative.z-10 {
+    will-change: transform, opacity;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.6);
+}
+
+/* --- Card & Hover Effects --- */
+.facility-card, .team-card {
+    transition: var(--transition);
+}
+
+.facility-card:hover {
+    transform: translateY(-10px);
+}
+
+.img-zoom-container {
+    overflow: hidden;
+}
+
+.img-zoom-container img {
+    transition: transform 0.5s ease;
+}
+
+.img-zoom-container:hover img {
+    transform: scale(1.1);
+}
+
+
+/* --- BMI Calculator Styling --- */
+#bmi-result {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Layar Handphone (Small Devices) */
+@media (max-width: 640px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    
+    #home p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    /* Tabel Jadwal Responsive */
+    table {
+        font-size: 0.85rem;
+    }
+    
+    th, td {
+        padding: 0.75rem 0.5rem !important;
+    }
+
+    /* Pricing Card */
+    .pricing-card-highlight {
+        transform: scale(1); /* Hilangkan zoom di mobile agar tidak memotong layar */
+        margin-top: 1rem;
+    }
+}
+
+/* Layar Tablet (Medium Devices) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    #home h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Custom Utilities */
+.text-gradient {
+    background: linear-gradient(to right, #f97316, #fb923c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Form Input Focus */
+input:focus, textarea:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2);
+    transition: var(--transition);
+}

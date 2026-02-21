@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DivGym | Raih Tubuh Impian Anda</title>
+    <link rel="icon" type="image/x-icon" href="assets/gymlogo.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-['Poppins']">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-orange-500">DIV<span class="text-white">GYM.</span></a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link text-white hover:text-orange-500">Home</a>
+                <a href="#about" class="nav-link text-white hover:text-orange-500">Tentang</a>
+                <a href="#facilities" class="nav-link text-white hover:text-orange-500">Fasilitas</a>
+                <a href="#classes" class="nav-link text-white hover:text-orange-500">Kelas</a>
+                <a href="#contact" class="bg-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-700 transition">Daftar Sekarang</a>
+            </div>
+            <button class="md:hidden text-white text-2xl" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen overflow-visible">
+        <div class="fixed-video-container">
+            <video autoplay muted loop playsinline crossorigin="anonymous" class="w-full h-full object-cover" poster="assets/posterhero.png">
+                <source src="assets/gymhero.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+
+        <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 uppercase tracking-tight">
+                    Raih <span class="text-orange-500">Body Impian</span> Anda Di Sini
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Fasilitas kelas dunia, pelatih profesional, dan komunitas yang mendukung perjalanan transformasi Anda.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-orange-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-orange-700 transition transform hover:scale-105">DAFTAR SEKARANG</a>
+                    <a href="#about" class="border-2 border-white text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-white hover:text-black transition transform hover:scale-105">TOUR GRATIS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gym" class="rounded-lg shadow-2xl">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-12">
+                    <h2 class="text-orange-600 font-bold tracking-widest uppercase mb-2">Tentang Kami</h2>
+                    <h3 class="text-4xl font-bold mb-6 text-gray-900">Lebih Dari Sekadar Tempat Angkat Beban</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Didirikan pada tahun 2015, DivGym berdedikasi untuk menciptakan lingkungan yang inklusif bagi siapa saja yang ingin mengubah gaya hidup mereka menjadi lebih sehat dan bugar.</p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-gray-900 mb-2 underline decoration-orange-500 decoration-4">Visi</h4>
+                            <p class="text-sm text-gray-500">Menjadi pusat kebugaran terdepan di Indonesia yang mengedukasi masyarakat tentang kesehatan holistik.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-gray-900 mb-2 underline decoration-orange-500 decoration-4">Misi</h4>
+                            <p class="text-sm text-gray-500">Menyediakan fasilitas premium, bimbingan personal, dan program latihan yang terukur.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Alat Gym Standar Internasional</li>
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Pelatih Tersertifikasi Nasional</li>
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Lingkungan Higienis & Nyaman</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4">Fasilitas Premium Kami</h2>
+                <div class="h-1 w-20 bg-orange-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Alat Gym -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
+                        <i class="fas fa-dumbbell text-2xl text-orange-600 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Area Beban</h4>
+                    <p class="text-gray-500 text-sm italic mb-2">Dumbbell, Barbell, Power Rack</p>
+                    <p class="text-gray-600">Alat lengkap untuk hypertrophy dan kekuatan otot.</p>
+                </div>
+                <!-- Cardio -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
+                        <i class="fas fa-running text-2xl text-orange-600 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Zon Cardio</h4>
+                    <p class="text-gray-500 text-sm italic mb-2">Treadmill, Elliptical, Static Bike</p>
+                    <p class="text-gray-600">Meningkatkan kesehatan jantung dengan alat terbaru.</p>
+                </div>
+                <!-- Studio -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
+                        <i class="fas fa-spa text-2xl text-orange-600 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Studio Yoga</h4>
+                    <p class="text-gray-500 text-sm italic mb-2">Yoga, Pilates, Meditation</p>
+                    <p class="text-gray-600">Ruangan yang tenang dan luas untuk fokus total.</p>
+                </div>
+                <!-- Extra -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
+                        <i class="fas fa-hot-tub text-2xl text-orange-600 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Sauna & Locker</h4>
+                    <p class="text-gray-500 text-sm italic mb-2">Steam Room, Hot Shower</p>
+                    <p class="text-gray-600">Relaksasi setelah latihan keras untuk recovery cepat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Pricing -->
+    <section id="classes" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-1/2 pr-0 lg:pr-10 mb-12">
+                    <h2 class="text-4xl font-bold mb-8">Program & Jadwal</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-orange-600">
+                                <tr>
+                                    <th class="p-4">Kelas</th>
+                                    <th class="p-4">Waktu</th>
+                                    <th class="p-4">Pelatih</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-700">
+                                <tr><td class="p-4">Zumba Dance</td><td class="p-4">08:00 - 09:30</td><td class="p-4">Siska</td></tr>
+                                <tr><td class="p-4">HIIT Core</td><td class="p-4">16:00 - 17:00</td><td class="p-4">Doni</td></tr>
+                                <tr><td class="p-4">Power Yoga</td><td class="p-4">19:00 - 20:30</td><td class="p-4">Maya</td></tr>
+                                <tr><td class="p-4">Muay Thai</td><td class="p-4">20:00 - 21:30</td><td class="p-4">Robby</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-4xl font-bold mb-8 text-center">Paket Membership</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="border border-gray-700 p-8 rounded-xl hover:border-orange-500 transition">
+                            <h4 class="text-xl font-bold mb-2">Monthly Pass</h4>
+                            <p class="text-3xl font-bold text-orange-500 mb-6">Rp 350.000 <span class="text-sm text-gray-400">/Bulan</span></p>
+                            <ul class="text-sm space-y-4 mb-8 text-gray-400">
+                                <li><i class="fas fa-check text-orange-500 mr-2"></i> Akses Gym Full-day</li>
+                                <li><i class="fas fa-check text-orange-500 mr-2"></i> Semua Kelas Grup</li>
+                                <li><i class="fas fa-check text-orange-500 mr-2"></i> Free WiFi & Locker</li>
+                            </ul>
+                            <button class="w-full py-3 bg-white text-black font-bold rounded-md hover:bg-orange-500 hover:text-white transition">Pilih Paket</button>
+                        </div>
+                        <div class="bg-orange-600 p-8 rounded-xl transform scale-105">
+                            <h4 class="text-xl font-bold mb-2">Yearly Pro</h4>
+                            <p class="text-3xl font-bold text-white mb-6">Rp 3.000.000 <span class="text-sm text-orange-200">/Tahun</span></p>
+                            <ul class="text-sm space-y-4 mb-8">
+                                <li><i class="fas fa-check text-white mr-2"></i> Semua Fitur Monthly</li>
+                                <li><i class="fas fa-check text-white mr-2"></i> 2x Sesi Personal Trainer</li>
+                                <li><i class="fas fa-check text-white mr-2"></i> Diskon 10% Suplemen</li>
+                            </ul>
+                            <button class="w-full py-3 bg-black text-white font-bold rounded-md hover:bg-gray-800 transition">Pilih Paket</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI Calculator (Fitur Tambahan) -->
+    <section class="py-20 bg-orange-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4 uppercase">Cek BMI Anda</h2>
+            <p class="mb-10">Ketahui indeks massa tubuh Anda untuk menentukan program yang tepat.</p>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-lg text-gray-800 shadow-2xl">
+                <div class="flex flex-wrap -mx-2 mb-4">
+                    <div class="w-1/2 px-2">
+                        <input type="number" id="weight" placeholder="Berat (kg)" class="w-full p-3 border border-gray-300 rounded-md">
+                    </div>
+                    <div class="w-1/2 px-2">
+                        <input type="number" id="height" placeholder="Tinggi (cm)" class="w-full p-3 border border-gray-300 rounded-md">
+                    </div>
+                </div>
+                <button onclick="calculateBMI()" class="w-full bg-black text-white py-3 rounded-md font-bold hover:bg-gray-800 transition">HITUNG SEKARANG</button>
+                <div id="bmi-result" class="mt-6 text-xl font-bold hidden">
+                    Hasil Anda: <span id="bmi-value" class="text-orange-600"></span> - <span id="bmi-status"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Pelatih Profesional Kami</h2>
+                <p class="text-gray-500">Dibimbing oleh ahli yang bersertifikat internasional.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="assets/pelatih1.png" alt="Trainer" class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="text-2xl font-bold">Cristiano Ronaldo</h4>
+                    <p class="text-orange-600 font-semibold mb-2">Body Expert</p>
+                    <p class="text-sm text-gray-500 px-4">Football Star | Body Health Specialist.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="assets/pelatih2.png" alt="Trainer" class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="text-2xl font-bold">Ryan Garcia</h4>
+                    <p class="text-orange-600 font-semibold mb-2">Power and Strength </p>
+                    <p class="text-sm text-gray-500 px-4">International Boxer | Power Trainer Specialist.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="assets/pelatih3.png" alt="Trainer" class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="text-2xl font-bold">Viktor Axelsen</h4>
+                    <p class="text-orange-600 font-semibold mb-2">HIIT & Cardio Specialist</p>
+                    <p class="text-sm text-gray-500 px-4">Denmark Badminton Player | Loose Weight Specialist.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-wrap">
+                <div class="w-full md:w-1/2 p-12">
+                    <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Nama Lengkap" class="w-full p-4 bg-gray-100 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none">
+                        <input type="email" placeholder="Email Anda" class="w-full p-4 bg-gray-100 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none">
+                        <textarea placeholder="Pesan Anda" rows="4" class="w-full p-4 bg-gray-100 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none"></textarea>
+                        <button class="bg-orange-600 text-white px-8 py-3 rounded-md font-bold w-full">KIRIM PESAN</button>
+                    </form>
+                </div>
+                <div class="w-full md:w-1/2 bg-gray-900 p-12 text-white">
+                    <h2 class="text-3xl font-bold mb-8">Informasi Lokasi</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-orange-500 mt-1 mr-4 text-xl"></i>
+                            <p>Jl Astina Pura, Tampaksiring</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-orange-500 mt-1 mr-4 text-xl"></i>
+                            <p>+62 812 3456 7890</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-orange-500 mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <p class="font-bold">Jam Operasional:</p>
+                                <p>Senin - Jumat: 06:00 - 22:00</p>
+                                <p>Sabtu - Minggu: 07:00 - 20:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <p class="font-bold mb-4">Ikuti Kami:</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10">
+        <div class="container mx-auto px-6 text-center text-gray-500 border-t border-gray-800 pt-8">
+            <p>&copy; 2023 DivGym Indonesia. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
